@@ -11,6 +11,9 @@
 		AC2333E829AC023B007062DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2333E629AC023B007062DB /* ContentView.swift */; };
 		AC2333E929AC023B007062DB /* PlaygroundQuickLookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2333E729AC023B007062DB /* PlaygroundQuickLookApp.swift */; };
 		AC2333EC29AC0419007062DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC2333EE29AC0419007062DB /* Localizable.strings */; };
+		AC30271829AD78460044F386 /* Highlightr in Frameworks */ = {isa = PBXBuildFile; productRef = AC30271729AD78460044F386 /* Highlightr */; };
+		AC30271A29AEC9B40044F386 /* AutoGrowTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30271929AEC9B40044F386 /* AutoGrowTextView.swift */; };
+		AC30271C29AECA2A0044F386 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30271B29AECA2A0044F386 /* PreviewViewController.swift */; };
 		AC86C42429ABDF3C00919204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC86C42329ABDF3C00919204 /* AppDelegate.swift */; };
 		AC86C42829ABDF3D00919204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC86C42729ABDF3D00919204 /* Assets.xcassets */; };
 		AC86C43E29ABDF7700919204 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC86C43D29ABDF7700919204 /* PreviewProvider.swift */; };
@@ -47,6 +50,8 @@
 		AC2333E629AC023B007062DB /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AC2333E729AC023B007062DB /* PlaygroundQuickLookApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaygroundQuickLookApp.swift; sourceTree = "<group>"; };
 		AC2333ED29AC0419007062DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AC30271929AEC9B40044F386 /* AutoGrowTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoGrowTextView.swift; sourceTree = "<group>"; };
+		AC30271B29AECA2A0044F386 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		AC86C42029ABDF3C00919204 /* PlaygroundQLPreviewProvider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaygroundQLPreviewProvider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC86C42329ABDF3C00919204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC86C42729ABDF3D00919204 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC30271829AD78460044F386 /* Highlightr in Frameworks */,
 				AC2333AB29ABF2AF007062DB /* QuickLookUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				AC86C43D29ABDF7700919204 /* PreviewProvider.swift */,
+				AC30271B29AECA2A0044F386 /* PreviewViewController.swift */,
+				AC30271929AEC9B40044F386 /* AutoGrowTextView.swift */,
 				AC86C44229ABDF7700919204 /* Info.plist */,
 				AC86C44329ABDF7700919204 /* PlaygroundPreview.entitlements */,
 			);
@@ -162,6 +170,9 @@
 			dependencies = (
 			);
 			name = PlaygroundPreview;
+			packageProductDependencies = (
+				AC30271729AD78460044F386 /* Highlightr */,
+			);
 			productName = PlaygroundPreview;
 			productReference = AC86C43629ABDF7600919204 /* PlaygroundPreview.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -184,7 +195,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AC86C41B29ABDF3C00919204 /* Build configuration list for PBXProject "PlaygroundQuickLook" */;
+			buildConfigurationList = AC86C41B29ABDF3C00919204 /* Build configuration list for PBXProject "PlaygroundQLPreviewProvider" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -193,6 +204,9 @@
 				Base,
 			);
 			mainGroup = AC86C41729ABDF3C00919204;
+			packageReferences = (
+				AC30271629AD78460044F386 /* XCRemoteSwiftPackageReference "Highlightr" */,
+			);
 			productRefGroup = AC86C42129ABDF3C00919204 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -238,6 +252,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC86C43E29ABDF7700919204 /* PreviewProvider.swift in Sources */,
+				AC30271A29AEC9B40044F386 /* AutoGrowTextView.swift in Sources */,
+				AC30271C29AECA2A0044F386 /* PreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,7 +507,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AC86C41B29ABDF3C00919204 /* Build configuration list for PBXProject "PlaygroundQuickLook" */ = {
+		AC86C41B29ABDF3C00919204 /* Build configuration list for PBXProject "PlaygroundQLPreviewProvider" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC86C42D29ABDF3D00919204 /* Debug */,
@@ -519,6 +535,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AC30271629AD78460044F386 /* XCRemoteSwiftPackageReference "Highlightr" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raspu/Highlightr";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AC30271729AD78460044F386 /* Highlightr */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC30271629AD78460044F386 /* XCRemoteSwiftPackageReference "Highlightr" */;
+			productName = Highlightr;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AC86C41829ABDF3C00919204 /* Project object */;
 }
