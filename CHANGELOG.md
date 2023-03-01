@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.1
+
+### Added or Changed
+- Preview now highlight syntax of previewed code
+- Adapting release script and resources
+
 ## v1.0
 
 ### Added or Changed
