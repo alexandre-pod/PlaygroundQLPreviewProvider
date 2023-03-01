@@ -3,10 +3,10 @@
 ####################################################################################################
 # How to run:
 #
-# cp script/.env.template script/.env
-# # Fill script/.env.template
-# source script/.env
-# ./script/distribute.sh
+# cp scripts/.env.template scripts/.env
+# # Fill scripts/.env.template
+# source scripts/.env
+# ./scripts/distribute.sh
 ####################################################################################################
 
 set -e
@@ -17,6 +17,10 @@ cd ..
 
 OUTPUT_DIR="output"
 ARCHIVE_PATH="$OUTPUT_DIR/archive.xcarchive"
+
+[[ -d "$OUTPUT_DIR" ]] && rm -rf "$OUTPUT_DIR"
+[[ -d tmp_derived_data ]] && rm -rf "tmp_derived_data"
+[[ -f release.zip ]] && rm release.zip
 
 xcodebuild archive -scheme PlaygroundQLPreviewProvider \
 	-archivePath "$ARCHIVE_PATH" \
